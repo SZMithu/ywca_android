@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/search"
+        android:title="search"
+        android:icon="@drawable/ic_search"
+        android:showAsAction="always"/>
+    <item
+        android:id="@+id/msg"
+        android:title="Message"
+        android:showAsAction="never"
+        />
+    <item
+        android:id="@+id/payment"
+        android:title="Payment"
+        android:showAsAction="never"
+        />
+</menu>
