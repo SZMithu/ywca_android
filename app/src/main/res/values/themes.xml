@@ -7,7 +7,7 @@
     </style>
 
     <style name="MyActionBar" parent="@android:style/Widget.Material.ActionBar">
-        <item name="android:background">@color/teal_200</item>
+        <item name="android:background">@color/primary_logo</item>
         <item name="android:titleTextStyle">@style/MyActionBarText</item>
     </style>
 
