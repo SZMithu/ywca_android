@@ -14,4 +14,8 @@
     <style name="MyActionBarText" parent="@android:style/TextAppearance.Material.Widget.ActionBar.Title">
         <item name="android:textColor">@color/white</item>
     </style>
+    <style name="Theme.Ywca.NoActionBar" parent="Theme.Ywca">
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
 </resources>

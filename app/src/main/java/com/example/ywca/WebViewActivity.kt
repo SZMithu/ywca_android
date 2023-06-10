@@ -32,11 +32,6 @@ class WebViewActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_webview)
 
-        actionBar?.apply {
-            setDisplayShowHomeEnabled(true)
-            setLogo(R.mipmap.ywca_logo)
-            setDisplayUseLogoEnabled(true)
-        }
 
         webView = findViewById<WebView>(R.id.web_view)
         webView?.setWebViewClient(WebViewClient())

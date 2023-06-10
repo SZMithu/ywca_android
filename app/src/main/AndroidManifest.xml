@@ -32,8 +32,7 @@
         <activity
             android:name=".WebViewActivity"
             android:label="@string/app_name"
-            android:icon="@mipmap/ywca_logo"
-            android:logo="@mipmap/ywca_logo"
+            android:theme="@style/Theme.Ywca.NoActionBar"
             >
         </activity>
     </application>
