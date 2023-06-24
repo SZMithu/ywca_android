@@ -35,6 +35,11 @@
             android:theme="@style/Theme.Ywca.NoActionBar"
             >
         </activity>
+        <activity
+            android:name=".NoticeActivity"
+            android:label="@string/app_name"
+            >
+        </activity>
     </application>
 
 </manifest>

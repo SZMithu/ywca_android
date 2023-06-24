@@ -2,107 +2,145 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/linearLayout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    >
+    android:layout_height="match_parent">
 
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:layout_marginTop="4dp"
-        android:gravity="center"
-        android:text="NOTICE BOARD"
-        android:textColor="@color/primary_logo"
-        android:textFontWeight="600"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_notice_list"
-        android:layout_width="match_parent"
+    <!-- CardView -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/nameCardView"
+        android:layout_width="360dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="1dp"
-        android:layout_marginEnd="1dp"
-        android:paddingBottom="85dp"
+        app:cardCornerRadius="20dp"
+        app:cardBackgroundColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/noticeCardView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.461">
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="8dp"
+            android:gravity="center"
+            android:text="YWCA HIGHER SECONDARY GIRL'S SCHOOL"
+            android:textColor="@color/primary_logo"
+            android:textStyle="bold"
+            android:textSize="24dp"
+         />
 
-    <ProgressBar
-        android:id="@+id/progress_bar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="308dp"
-        android:progressTint="@color/primary_logo"
-        android:visibility="gone"
-        app:layout_constraintBottom_toTopOf="@+id/btn_profile"
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/noticeCardView"
+        android:layout_width="160dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="32dp"
+        app:cardCornerRadius="20dp"
+        android:clickable="true"
+        android:contextClickable="true"
+        android:focusable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:cardBackgroundColor="@color/primary_logo"
+        app:layout_constraintBottom_toTopOf="@+id/messageCardView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.894">
+
+        <TextView
+            android:id="@+id/noticeTextView"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:drawableTop="@drawable/ic_main_notice"
+            android:text="Notices"
+            android:textColor="@android:color/white"
+            android:textSize="22sp" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/paymentCardView"
+        android:layout_width="160dp"
+        android:layout_height="100dp"
+        android:layout_marginEnd="32dp"
+        app:cardCornerRadius="20dp"
+        android:clickable="true"
+        android:contextClickable="true"
+        android:focusable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:cardBackgroundColor="@color/primary_logo"
+        app:layout_constraintBottom_toTopOf="@+id/profileCardView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.894">
 
-    <Button
-        android:id="@+id/btn_payment"
-        android:layout_width="0dp"
-        android:layout_height="45dp"
-        android:background="@drawable/btn_border_top"
-        android:textColor="@color/primary_logo"
-        android:drawableTop="@drawable/ic_payment"
-        android:text="Payment"
-        android:textSize="10sp"
+        <TextView
+            android:id="@+id/paymentTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:drawableTop="@drawable/ic_main_payment"
+            android:drawableTint="@color/white"
+            android:text="Payments"
+            android:textColor="@android:color/white"
+            android:textSize="22sp" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/messageCardView"
+        android:layout_width="160dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="32dp"
+        app:cardCornerRadius="20dp"
+        android:layout_marginBottom="200dp"
+        android:clickable="true"
+        android:contextClickable="true"
+        android:focusable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:cardBackgroundColor="@color/primary_logo"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintWidth_percent="0.25"
-        />
+        app:layout_constraintStart_toStartOf="parent">
 
-    <Button
-        android:id="@+id/btn_result"
-        android:layout_width="0dp"
-        android:layout_height="45dp"
-        android:background="@drawable/btn_border_right"
-        android:textColor="@color/primary_logo"
-        android:drawableTop="@drawable/ic_result"
-        android:text="Result"
-        android:textSize="10sp"
+        <TextView
+            android:id="@+id/messageTextView"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:drawableTop="@drawable/ic_main_msg"
+            android:text="Messages"
+            android:textColor="@android:color/white"
+            android:textSize="22sp" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/profileCardView"
+        android:layout_width="160dp"
+        android:layout_height="100dp"
+        android:layout_marginEnd="32dp"
+        app:cardCornerRadius="20dp"
+        android:layout_marginBottom="200dp"
+        android:clickable="true"
+        android:contextClickable="true"
+        android:focusable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:cardBackgroundColor="@color/primary_logo"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btn_payment"
-        app:layout_constraintWidth_percent="0.25"
-        />
+        app:layout_constraintEnd_toEndOf="parent">
 
-    <Button
-        android:id="@+id/btn_profile"
-        android:layout_width="0dp"
-        android:layout_height="45dp"
-        android:background="@drawable/btn_border_top"
-        android:textColor="@color/primary_logo"
-        android:drawableTop="@drawable/ic_profile"
-        android:text="Profile"
-        android:textSize="10sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btn_result"
-        app:layout_constraintWidth_percent="0.25"
-        />
-
-    <Button
-        android:id="@+id/btn_msg"
-        android:layout_width="0dp"
-        android:layout_height="45dp"
-        android:background="@drawable/btn_border_top"
-        android:textColor="@color/primary_logo"
-        android:drawableTop="@drawable/ic_message"
-        android:text="Message"
-        android:textSize="10sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btn_profile"
-        app:layout_constraintWidth_percent="0.25"
-        />
-
-
+        <TextView
+            android:id="@+id/profileTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:drawableTop="@drawable/ic_main_profile"
+            android:text="Profile"
+            android:textColor="@android:color/white"
+            android:textSize="22sp" />
+    </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

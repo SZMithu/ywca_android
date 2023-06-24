@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="4dp"
+        android:gravity="center"
+        android:text="NOTICE BOARD"
+        android:textColor="@color/primary_logo"
+        android:textFontWeight="600"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_notice_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:paddingBottom="85dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="308dp"
+        android:progressTint="@color/primary_logo"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/btn_profile"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btn_payment"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:background="@drawable/btn_border_top"
+        android:textColor="@color/primary_logo"
+        android:drawableTop="@drawable/ic_payment"
+        android:text="Payment"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent="0.25"
+        />
+
+    <Button
+        android:id="@+id/btn_result"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:background="@drawable/btn_border_right"
+        android:textColor="@color/primary_logo"
+        android:drawableTop="@drawable/ic_result"
+        android:text="Result"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn_payment"
+        app:layout_constraintWidth_percent="0.25"
+        />
+
+    <Button
+        android:id="@+id/btn_profile"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:background="@drawable/btn_border_top"
+        android:textColor="@color/primary_logo"
+        android:drawableTop="@drawable/ic_profile"
+        android:text="Profile"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn_result"
+        app:layout_constraintWidth_percent="0.25"
+        />
+
+    <Button
+        android:id="@+id/btn_msg"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:background="@drawable/btn_border_top"
+        android:textColor="@color/primary_logo"
+        android:drawableTop="@drawable/ic_message"
+        android:text="Message"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn_profile"
+        app:layout_constraintWidth_percent="0.25"
+        />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
