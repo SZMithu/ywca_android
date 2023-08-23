@@ -57,7 +57,7 @@ class NoticeActivity : ComponentActivity() {
         // Set click listeners for buttons
         val messageButton = findViewById<Button>(R.id.btn_msg)
         messageButton.setOnClickListener {
-            openWebView()
+            openGmailWebView()
         }
 
     }
@@ -96,6 +96,16 @@ class NoticeActivity : ComponentActivity() {
     private fun openWebView() {
         val intent = Intent(this, WebViewActivity::class.java)
         startActivity(intent)
+
+    }
+    private fun openGmailWebView() {
+        val intent = packageManager.getLaunchIntentForPackage("com.google.android.gm")
+        if(intent != null){
+            startActivity(intent)
+        }else{
+            val webIntent = Intent(this, GmailWebViewActivity::class.java)
+            startActivity(webIntent)
+        }
 
     }
 
