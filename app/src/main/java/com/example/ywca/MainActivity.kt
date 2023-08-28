@@ -42,6 +42,11 @@ class MainActivity : ComponentActivity() {
         admissionButton.setOnClickListener {
             openAdmissionWebView()
         }
+        // Set click listeners for buttons
+        val resultButton = findViewById<CardView>(R.id.resultCardView)
+        resultButton.setOnClickListener {
+            openWebView()
+        }
     }
 
 

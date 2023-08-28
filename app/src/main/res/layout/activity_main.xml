@@ -10,25 +10,27 @@
         android:id="@+id/nameCardView"
         android:layout_width="360dp"
         android:layout_height="wrap_content"
-        app:cardCornerRadius="20dp"
         app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="20dp"
         app:layout_constraintBottom_toTopOf="@+id/noticeCardView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.461">
+        app:layout_constraintVertical_bias="0.461"
+        tools:ignore="TextSizeCheck">
+
         <TextView
             android:id="@+id/tvName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:padding="8dp"
             android:gravity="center"
-            android:text="YWCA HIGHER SECONDARY GIRL'S SCHOOL"
+            android:padding="8dp"
+            android:text="YWCA HIGHER SECONDARY GIRLS' SCHOOL"
             android:textColor="@color/primary_logo"
+            android:textSize="24sp"
             android:textStyle="bold"
-            android:textSize="24dp"
-         />
+            tools:ignore="HardcodedText" />
 
 
     </androidx.cardview.widget.CardView>
@@ -37,25 +39,24 @@
         android:id="@+id/noticeCardView"
         android:layout_width="160dp"
         android:layout_height="100dp"
-        android:layout_marginStart="32dp"
-        app:cardCornerRadius="20dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="192dp"
         android:clickable="true"
         android:contextClickable="true"
         android:focusable="true"
         android:foreground="?android:attr/selectableItemBackground"
         app:cardBackgroundColor="@color/primary_logo"
-        app:layout_constraintBottom_toTopOf="@+id/messageCardView"
+        app:cardCornerRadius="20dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.894">
+        app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:id="@+id/noticeTextView"
             android:layout_width="110dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:gravity="center"
             android:drawableTop="@drawable/ic_main_notice"
+            android:gravity="center"
             android:text="Notices"
             android:textColor="@android:color/white"
             android:textSize="20sp" />
@@ -65,17 +66,19 @@
         android:id="@+id/paymentCardView"
         android:layout_width="160dp"
         android:layout_height="100dp"
-        android:layout_marginEnd="32dp"
-        app:cardCornerRadius="20dp"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="192dp"
+        android:layout_marginEnd="36dp"
         android:clickable="true"
         android:contextClickable="true"
         android:focusable="true"
         android:foreground="?android:attr/selectableItemBackground"
         app:cardBackgroundColor="@color/primary_logo"
-        app:layout_constraintBottom_toTopOf="@+id/profileCardView"
+        app:cardCornerRadius="20dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.894">
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/noticeCardView"
+        app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:id="@+id/paymentTextView"
@@ -93,27 +96,30 @@
         android:id="@+id/messageCardView"
         android:layout_width="160dp"
         android:layout_height="100dp"
-        android:layout_marginStart="32dp"
-        app:cardCornerRadius="20dp"
-        android:layout_marginBottom="200dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="36dp"
         android:clickable="true"
         android:contextClickable="true"
         android:focusable="true"
         android:foreground="?android:attr/selectableItemBackground"
         app:cardBackgroundColor="@color/primary_logo"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:cardCornerRadius="20dp"
+        app:layout_constraintEnd_toStartOf="@+id/profileCardView"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/noticeCardView">
 
         <TextView
             android:id="@+id/messageTextView"
             android:layout_width="110dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:gravity="center"
             android:drawableTop="@drawable/ic_main_msg"
+            android:gravity="center"
             android:text="Messages"
             android:textColor="@android:color/white"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            tools:ignore="TextSizeCheck" />
 
     </androidx.cardview.widget.CardView>
 
@@ -121,22 +127,23 @@
         android:id="@+id/profileCardView"
         android:layout_width="160dp"
         android:layout_height="100dp"
-        android:layout_marginEnd="32dp"
-        app:cardCornerRadius="20dp"
-        android:layout_marginBottom="200dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="36dp"
         android:clickable="true"
         android:contextClickable="true"
         android:focusable="true"
         android:foreground="?android:attr/selectableItemBackground"
         app:cardBackgroundColor="@color/primary_logo"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:cardCornerRadius="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/paymentCardView">
 
         <TextView
             android:id="@+id/profileTextView"
-            android:layout_width="wrap_content"
+            android:layout_width="110dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:gravity="center"
             android:drawableTop="@drawable/ic_main_profile"
             android:text="Profile"
             android:textColor="@android:color/white"
@@ -147,7 +154,36 @@
         android:id="@+id/admissionCardView"
         android:layout_width="160dp"
         android:layout_height="100dp"
-        android:layout_marginBottom="76dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="36dp"
+        android:clickable="true"
+        android:contextClickable="true"
+        android:focusable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:cardBackgroundColor="@color/primary_logo"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/messageCardView"
+        app:layout_constraintVertical_bias="0.005">
+
+        <TextView
+            android:id="@+id/admissionTextView"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:drawableTop="@drawable/ic_main_admission"
+            android:text="Admission"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/resultCardView"
+        android:layout_width="160dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="36dp"
         android:clickable="true"
         android:contextClickable="true"
         android:focusable="true"
@@ -156,15 +192,18 @@
         app:cardCornerRadius="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/admissionCardView"
+        app:layout_constraintTop_toBottomOf="@+id/profileCardView"
+        app:layout_constraintVertical_bias="0.011">
 
         <TextView
-            android:id="@+id/admissionTextView"
-            android:layout_width="wrap_content"
+            android:id="@+id/resultTextView"
+            android:layout_width="110dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:drawableTop="@drawable/ic_main_admission"
-            android:text="Admission"
+            android:drawableTop="@drawable/ic_main_result"
+            android:text="Results"
             android:textColor="@android:color/white"
             android:textSize="20sp" />
     </androidx.cardview.widget.CardView>
