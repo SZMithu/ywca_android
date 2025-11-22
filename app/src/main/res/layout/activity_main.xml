@@ -28,7 +28,7 @@
             android:padding="8dp"
             android:text="YWCA HIGHER SECONDARY GIRLS' SCHOOL"
             android:textColor="@color/primary_logo"
-            android:textSize="24sp"
+            android:textSize="22sp"
             android:textStyle="bold"
             tools:ignore="HardcodedText" />
 
@@ -66,7 +66,6 @@
         android:id="@+id/paymentCardView"
         android:layout_width="160dp"
         android:layout_height="100dp"
-        android:layout_marginStart="19dp"
         android:layout_marginTop="192dp"
         android:layout_marginEnd="36dp"
         android:clickable="true"
@@ -76,7 +75,7 @@
         app:cardBackgroundColor="@color/primary_logo"
         app:cardCornerRadius="20dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/noticeCardView"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -172,6 +171,7 @@
             android:layout_width="110dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:gravity="center"
             android:drawableTop="@drawable/ic_main_admission"
             android:text="Admission"
             android:textColor="@android:color/white"
@@ -202,6 +202,7 @@
             android:layout_width="110dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:gravity="center"
             android:drawableTop="@drawable/ic_main_result"
             android:text="Results"
             android:textColor="@android:color/white"
